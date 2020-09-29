@@ -2,24 +2,23 @@ import pygame
 pygame.init()
 import random
 
-screen_width= 800
-screen_height= 600
+screen_width = 800
+screen_height = 600
 
-
-screen= pygame.display.set_mode((screen_width,screen_height))
+screen = pygame.display.set_mode((screen_width,screen_height))
 pygame.display.set_caption("Shooting Game")
 
-icon= pygame.image.load("Sunflower.jpg")
+icon = pygame.image.load("Sunflower.jpg")
 pygame.display.set_icon(icon)
 
 #create player
-player_img = pygame.image.load("/home/anwesha/Documents/Pythongame/player1.jpeg").convert()
+player_img = pygame.image.load("player1.jpeg").convert()
 playerX = 370
 playerY = 480
 playerX_change=0
 
 #Create enemy
-enemy_img = pygame.image.load("/home/anwesha/Documents/Pythongame/enemy.jpeg").convert()
+enemy_img = pygame.image.load("enemy.jpeg").convert()
 enemyX = random.randint(0,736)
 enemyY = random.randint(50,150)
 enemyX_change = 5
@@ -71,9 +70,5 @@ while running:
     #update the screen
     pygame.display.update()
 
-    
-
-    
-    
-    
+ 
 pygame.quit()
